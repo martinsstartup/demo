@@ -1,0 +1,4 @@
+# Project exclude paths
+/target/
+/src/main/webapp/resources/vendor/fontawesome-free/
+/src/main/webapp/resources/vendor/bootstrap/

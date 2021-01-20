@@ -1,0 +1,254 @@
+[
+  {
+    "id": "ad1",
+    "text": "Release Planning",
+    "helpText": "Release management aims to ensure that the integrity of the live environment is protected and that the correct components are released. It also contributes to the efficient introduction of changes by combining them into one release and deploying them together. The release management process includes ”emergency” releases for high-impact incidents that were resolved and must go in to the live environment immediately to minimize service disruption.",
+    "excelRowNum": 72,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad2",
+    "text": "Application Analysis",
+    "helpText": "Produce a requirement pack for the solution consisting of the application requirements, use cases, business rules, and other requirements-related deliverables.<br/>\nDefine an inventory of work items which will be designed in the next stage from a clearly defined set of requirements.<br/>\nEnsure that requirements are complete, clear, and specific. Use the requirement development guidelines for guidance.<br/>\nAnalyze the requirements and use cases to create a starting point or first iteration for the application design.<br/>\nEstablish the approach, technique, and tools to enable and support the requirements traceability throughout the project life cycle.",
+    "excelRowNum": 73,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad3",
+    "text": "Architecture Design",
+    "helpText": "Create the development, runtime, and operations architecture designs to meet technical requirements of the architecture components and processes.<br/>\nSelect third-party point solutions to fill gaps left by the packaged software capabilities or design custom solutions for any additional gaps.<br/>\nDefine the Continuous Delivery pipeline that will be capable of automating the validation and progression of changes from check-in to deployment and to production. <br/>\nDefine the test approaches, conditions, scenarios, and cycles to describe how architecture tests will be conducted technically.<br/>\nDevOps plays a key role while designing the architecture of an application or system. From tools customization for the relevant project and the scripting for the project depending on the project need we will need to design all the aspects related to the environments present and used during the project like test environments and production.",
+    "excelRowNum": 74,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad4",
+    "text": "UI Design",
+    "helpText": "Refine UI Standards<br/>\nCoordinate Visual design<br/>\nDesign Reports<br/>\nDesign Page/Screen Specifications",
+    "excelRowNum": 75,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad5",
+    "text": "Build",
+    "helpText": "Design the class methods and create the unit/component test code which will test them.<br/>\nBuild the application classes and conduct unit/component test to verify the design.<br/>\nDevelop the user interface screens, finalize the user interface graphics, and integrate them onto the pages. <br/>\nBuild the application database to translate the physical database design into the database.<br/>\nWhen performing continuous integration, iterate between unit test creation and component build and test to ensure that unit tests are updated as the code evolves.<br/>\nFix defects discovered during unit/component testing and ensure the fix team is following the correct process. <br/>\nRehearse the fix process for selected test script execution in readiness for test execution.<br/>\nAutomation of existing processes to be included for the entire application from build to testing.",
+    "excelRowNum": 76,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad6",
+    "text": "Functional Testing",
+    "helpText": "Plan Application Product Test<br/>\nPlan Integration Product Test<br/>\nPlan Assembly Test<br/>\nPlan Regression Test<br/>\nPlan Automation Approach<br/>\nPlan UAT<br/>\nDefine Test Data and Environment Management Approach",
+    "excelRowNum": 77,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad7",
+    "text": "Test Automation",
+    "helpText": "Need to find good description/explanation",
+    "excelRowNum": 78,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad8",
+    "text": "Performance Testing",
+    "helpText": "Identify tools and technologies<br/>\nSet metrics<br/>\nAgree on requirements and<br/>\ngoals<br/>\nWorkload modeling<br/>\nTest planning ang execution<br/>\nTest result analysis and<br/>\nreporting<br/>\nTest scripts and test scenarios<br/>\ndevelopment<br/>\nTest parametrization and test<br/>\ndata management",
+    "excelRowNum": 79,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad9",
+    "text": "Security Testing",
+    "helpText": "Is LATC accountable/responsibe (doing) secuirty testing (Vulnerability Scanning, Security Scanning, Penetration Testing, Security Audit/ Review, Ethical Hacking., Risk Assessment, Posture Assessment)",
+    "excelRowNum": 80,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad10",
+    "text": "Environment Management",
+    "helpText": "Provide technical support to the application teams during the entire development life cycle: analysis, design, build, test, and deploy.<br/>\nMonitor the environments to minimize issues and to ensure availability.<br/>\nManage environment configuration and user access.<br/>\nMaintain the environment periodically to apply fixes or upgrades.<br/>\nHand over the technology environment to the client or retire the environment at the end of the project.",
+    "excelRowNum": 81,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad11",
+    "text": "Deploy \u0026 Continuous Integration",
+    "helpText": "Design and document the tools and process for Continuous Integration and Continuous Deployment Environment(s)<br/>\nDefine Quality Gates and entry points into the CI/CD environment<br/>\nCreate and maintain CI/CD pipelines",
+    "excelRowNum": 82,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ad12",
+    "text": "Transition to Service Operations",
+    "helpText": "Development projects planning to hand over the application to a support organization for ongoing operations should include the service introduction activity as part of the project scope, regardless of whether you are transitioning the application to a client organization, third party, or Accenture services. Client satisfaction and the potential for future work with the client depend on our products being easy and economical to maintain. ",
+    "excelRowNum": 83,
+    "excelColumnNum": 3
+  },
+  {
+    "id": "ao1",
+    "text": "Event Management",
+    "helpText": "Filter the detected events to either log the event in the event management tool or allow it to remain as an entry in the CI system. Categorize the events as Informational, Warnings, or Exceptions.<br/>\nDetermine appropriate response to the event. Notify and engage the appropriate support teams to implement the response.<br/>\nReview the event response (if necessary). Close the event, or escalate the event response if necessary.<br/>\nMonitor and track events. If the event is a potential risk to SLA, escalate the event. Otherwise, inform the key stakeholder of the current status of the event.<br/>\nGenerate, review, and analyze the event management reports. Identify improvement opportunities in the process, and submit this information to the appropriate team members.",
+    "excelRowNum": 72,
+    "excelColumnNum": 5
+  },
+  {
+    "id": "ao2",
+    "text": "Service Request Management",
+    "helpText": "Request management encompasses the activities that enable an account to manage the processing of all non-corrective work within the scope of the contract and within agreed service levels as applicable, utilizing service desk resources as required. Request management does not include incidents, problems, or unapproved non-contractual work.",
+    "excelRowNum": 73,
+    "excelColumnNum": 5
+  },
+  {
+    "id": "ao3",
+    "text": "Incident Management",
+    "helpText": "An incident is the reporting of an event that is not part of the standard operation of a service and that causes an interruption to, or a reduction in, the delivery of that service. Errors, reduction in quality of service (perceived or real), and a user having difficulty consuming a service (for example, being unable to access a website) are all examples of incidents.<br/>\n<br/>\nThe objective of Incident Management is to restore service to the users, by processing incidents quickly and effectively, providing first level service desk support with escalation to second level application support teams as required.<br/>\n<br/>\nIncident Management includes the activities that provide organizations with the ability to manage (record, track, monitor and resolve) unplanned interruptions to service (incidents) with the primary objective of restoring normal service operation as quickly as possible. The management of an incident is reactive and is typically in response to some adverse event. Incidents can be reported by users, by operations personnel, or automatically detected and reported by monitoring devices. These interruptions or \"incidents\" are then routed to the correct support resources to resolve the incidents as quickly as possible.<br/>\n<br/>\nIncident Management is limited in scope to incidents relating to the contracted services.<br/>\n<br/>\nIncident Management:<br/>\n<br/>\nDoes not include requests for new or additional service.<br/>\nDoes not always include a root cause analysis.<br/>\nDoes not always include a permanent/structural solution. A workaround may be sufficient.",
+    "excelRowNum": 74,
+    "excelColumnNum": 5
+  },
+  {
+    "id": "ao4",
+    "text": "Problem Management",
+    "helpText": "A problem is the unknown, underlying cause of one or more incidents. A problem can be triggered by effective incident management and by proactive problem diagnosis typically identified through incident trending. This practice documents the management of the entire problem lifecycle from identification to resolution.<br/>\n<br/>\nThe objectives of Problem Management are to:<br/>\n<br/>\nEliminate infrastructure errors, effectively and efficiently, that lead to unplanned downtime<br/>\nReduce problems and resulting incidents from affecting the business<br/>\nEliminate recurring incidents<br/>\nMinimize the impact of incidents that cannot be prevented",
+    "excelRowNum": 75,
+    "excelColumnNum": 5
+  },
+  {
+    "id": "ao5",
+    "text": "Change Management - Standard Changes",
+    "helpText": "Standard change (also known as a pre-approved or pre-planned change). A Request for Change (RFC) that is completely documented and performed on a scheduled or ad hoc basis. These changes are pre-approved and pre-authorized by the Change Advisory Board (CAB) and the change manager. If a completely documented change model exists, they may be handled as service requests, at the discretion of the CAB.",
+    "excelRowNum": 76,
+    "excelColumnNum": 5
+  },
+  {
+    "id": "ao6",
+    "text": "Change Management - Normal Changes",
+    "helpText": "Normal change. An RFC that is not standard and requires advance approval and planning. The change manager must assess the risk and impact of normal changes. The CAB (or a defined subset of the CAB) must approve normal changes. Normal changes may be further classified based on impact and risk levels. The designation “normal” comes from the fact that this type of change follows the normal path through the change management life cycle.",
+    "excelRowNum": 77,
+    "excelColumnNum": 5
+  },
+  {
+    "id": "ao7",
+    "text": "Change Management - Emergency Changes",
+    "helpText": "An RFC that requires immediate action to meet service levels. An emergency change needs to be implemented immediately and outside the normal approval procedures. This situation can arise where rapid changes are required to keep the operation working. For example, virus patches need to be updated on the servers and all workstations to control a vulnerability.<br/>\nMajor change.",
+    "excelRowNum": 78,
+    "excelColumnNum": 5
+  },
+  {
+    "id": "mgmnt1",
+    "text": "Mobilization Management",
+    "helpText": "Project:<br/>\nPlans the project.<br/>\nEnables the governance and management functions for the project, based on the program’s existing management structure.<br/>\nObtains and trains project resources<br/>\nService:<br/>\nMobilizes all common service functions for the engagement that interface directly with the client.<br/>\nMobilizes all governance, management, metrics, and reporting specific to service management, leveraging the standards for the engagement when applicable.<br/>\nhttps://methodology.accenture.com/ppsm/home/ppsm?url\u003d/publish.ppsm/customcategories/Mobilize_18FA2940.html ",
+    "excelRowNum": 72,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt2",
+    "text": "Scope \u0026 Requirements Management",
+    "helpText": "Scope Change Management defines how changes to any agreement with client such as scope, budget, schedule, service, and contract are evaluated for their impact and approved by the client. It ensures all changes to the baselines are identified, controlled, consistently handled, and tracked throughout the delivery lifecycle.",
+    "excelRowNum": 73,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt3",
+    "text": "Demand Management",
+    "helpText": "Demand Management involves the proactive forecasting of demand for services and the continuing adjustment of demand to balance the agreed budget and resource capacity.",
+    "excelRowNum": 74,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt4",
+    "text": "Resource Management",
+    "helpText": "Provide training and coaching to resources, monitor resource performance, provide performance feedback, and manage team satisfaction.",
+    "excelRowNum": 75,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt5",
+    "text": "Work Planning \u0026 Management",
+    "helpText": "Maintain the work plan throughout the project.",
+    "excelRowNum": 76,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt6",
+    "text": "Deliverables Management",
+    "helpText": "Manage the deliverable completion based on the agreed upon roles and responsibilities of all the parties involved to deliver the project scope.",
+    "excelRowNum": 77,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt7",
+    "text": "Configuration Management",
+    "helpText": "Configuration Management (CM) ensures that configuration items (CIs) are identified, controlled, statused, and audited. The CM process integrates the technical and administrative actions of identifying the functional, performance and physical characteristics of a configuration item (CI) and controls the changes to those characteristics.<br/>\n<br/>\nCM enables the controlled and repeatable management of information technology (IT) components as they evolve in all stages of development and maintenance. CM implements a process by which the project teams and stakeholders identify, communicate, implement, document and manage changes in the systems environment. When properly implemented, CM maintains the integrity of the items that have been placed under its control.",
+    "excelRowNum": 78,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt8",
+    "text": "Quality Management",
+    "helpText": "Ensure implementation of quality activities to ensure project meets the delivery quality standards and client expectations.",
+    "excelRowNum": 79,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt9",
+    "text": "Risks \u0026 Issues Management",
+    "helpText": " Perform risk assessment, and manage project risks through closure. Escalate risks to the appropriate leadership.  Identify and track project issues through closure. Escalate issues to the appropriate stakeholders.",
+    "excelRowNum": 80,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt10",
+    "text": "Performance \u0026 Reporting Management",
+    "helpText": "Review engagement performance and manage and fulfill project reporting needs for the engagement and client.",
+    "excelRowNum": 81,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt11",
+    "text": "Compliance Management (i.e. CDP, CC)",
+    "helpText": "tbd",
+    "excelRowNum": 82,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt12",
+    "text": "Business Continuity Management",
+    "helpText": "Just to reiterate:<br/>\n1. IF engagement style is “resource supply” AND people work only from onsite and/or client site THEN BCP responsibility is what? NA?<br/>\n2. ELSE IF AO (Service Delivery) with SLA’s or E2E (SI) or E2E (SI) with Service Delivery (AO) THEN BCP \u003d LATC Accountable<br/>\n3. ELSE BCP \u003d LATC Responsible",
+    "excelRowNum": 83,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt13",
+    "text": "Work Environment Management",
+    "helpText": "Work Environment Management manages changes to work environment and tooling requirements and continuously supports the engagement in provisioning, maintaining, and deactivating work space and access to technology as resources onboard, transfer, and leave the engagement.",
+    "excelRowNum": 84,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt14",
+    "text": "Vendor Management (e.g. subcontractors)",
+    "helpText": "Vendor management is the selection, management, and monitoring of vendors and all products or services provided by the vendors to the engagement. It includes the purchasing of goods, licensing of hardware and software, subcontracting for services, and obtaining temporary help through contractors.<br/>\n<br/>\nAccenture Procurement must be involved before making contact with vendors. Go to the Accenture Procurement for more information.",
+    "excelRowNum": 85,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt15",
+    "text": "Client Expectations Management",
+    "helpText": "TBD",
+    "excelRowNum": 86,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt16",
+    "text": "Financial Management",
+    "helpText": "Financial Management manages and maintains all financial aspects of the engagement. For Accenture engagements, it involves planning, analyzing, monitoring and controlling all financials based on the account structures, billing, accounts receivable, procurement, accounts payable, expenses, and revenue recognition. For client program/project, it manages budget and financial reporting specific to the program/project.",
+    "excelRowNum": 87,
+    "excelColumnNum": 7
+  },
+  {
+    "id": "mgmnt17",
+    "text": "Contract Management",
+    "helpText": "Contract Management is a defined set of processes for monitoring contractual commitments and ensuring compliance. Effective contract management verifies that obligations are performed in the most cost-effective manner, minimizing risk exposure to Accenture, while also developing and strengthening client relationships.",
+    "excelRowNum": 88,
+    "excelColumnNum": 7
+  }
+]

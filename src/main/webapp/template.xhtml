@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet name="css/primeflex/primeflex.css"/>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+    <h:outputStylesheet name="css/dcso.css"/>
+
+    <script>
+        PrimeFaces.locales['en_GB'] = {
+            firstDay: 1
+        };
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <h:outputStylesheet name="css/w3_mod.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+        .w3-sidebar {
+            z-index: unset;
+            width: 200px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+        .hover-blue:hover{
+            color:#F0EEE9!important;
+            background-color:#00589B!important}
+    </style>
+</h:head>
+<h:body style="background: #F0EEE9">
+    <!-- Navbar -->
+    <div class="w3-top" >
+        <div class="w3-bar w3-top w3-left-align w3-large" style="background: #363B48;">
+            <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-xlargelarge" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <div class="w3-bar-item">
+                <img src="https://my.accenture.lv/assets/logo-40dc9b3bfa007d7677d5f680c9bba34b2193d63c71d278d82b06fb8a18b8b913.svg" height="15px"/>
+            </div>
+            <div class="w3-bar-item w3-hide-small w3-hide-medium" style="width: 100px"> </div>
+            <div class="ui-g">
+                <p:outputLabel styleClass="w3-bar-item w3-medium" style="color: #939597;" value="Client: "/>
+                <div id="clNameTop" class="w3-bar-item w3-medium"> #{dcso.clientName}</div>
+                <p:outputLabel styleClass="w3-bar-item w3-medium" style="color: #939597;" value="Opp name: "/>
+                <div id="oppNameTop" class="w3-bar-item w3-medium"> #{dcso.industry}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" id="mySidebar" style="background: #C2BFB5">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-medium w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h6 class="w3-bar-item">DCSO</h6>
+        <a class="w3-bar-item w3-button hover-blue #{activeTab == 0 ? 'tab-selected' : ''}" href="index.xhtml"><span class="fa-stack fa-1x" style="text-align: center"><i class="fa fa-comments-o" ></i></span>Questionaire</a>
+        <a class="w3-bar-item w3-button hover-blue #{activeTab == 1 ? 'tab-selected' : ''}" href="resource-model.xhtml"><span class="fa-stack fa-1x" style="text-align: center"><i class="fa fa-table"></i></span>Resource Model</a>
+        <a class="w3-bar-item w3-button hover-blue #{activeTab == 2 ? 'tab-selected' : ''}" href="risks.xhtml"><span class="fa-stack fa-1x" style="text-align: center"><i class="fa fa-bolt"></i></span>Risks</a>
+        <a class="w3-bar-item w3-button hover-blue #{activeTab == 3 ? 'tab-selected' : ''}" href="assumptions.xhtml"><span class="fa-stack fa-1x" style="text-align: center"><i class="fa fa-diamond"></i></span>Assumptions</a>
+        <a class="w3-bar-item w3-button hover-blue #{activeTab == 4 ? 'tab-selected' : ''}" href="dnps.xhtml"><span class="fa-stack fa-1x" style="text-align: center"><i class="fa fa-usd"></i></span>DNPs</a>
+        <a class="w3-bar-item w3-button hover-blue #{activeTab == 5 ? 'tab-selected' : ''}" href="tools.xhtml"><span class="fa-stack fa-1x" style="text-align: center"><i class="fa fa-wrench"></i></span>Tools</a>
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:200px;margin-top: 43px;">
+        <ui:insert name="content" >
+
+        </ui:insert>
+    </div>
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+</h:body>
+</html>

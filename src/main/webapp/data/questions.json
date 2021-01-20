@@ -1,0 +1,441 @@
+[
+  {
+    "id": "Ref.",
+    "riskAssessmentCategory": "Risk Assessment Category",
+    "riskAssessmentReference": "RA Ref.",
+    "text": "Risk Assessment Question",
+    "optionsCommentsOnImpact": "Options \u0026 Comments on Impact",
+    "excelRowNumber": -1
+  },
+  {
+    "id": "1.1",
+    "riskAssessmentCategory": "Client Financial Business Case",
+    "riskAssessmentReference": "CE.05",
+    "text": "Is client overview, business challenge and Accenture value proposition documented/shared in Solution Plan?",
+    "optionsCommentsOnImpact": "ATC needs to understand the overall client\u0027s business cases and proposed solution. If something similar has been done before or this type of solution is something completely new. Also it allows to evaluate, if ATC prior experience has some lessons learned, that need to be taken into account to ensure the success for similar deal, case within the industry/client.",
+    "excelRowNumber": 27
+  },
+  {
+    "id": "2.1",
+    "riskAssessmentCategory": "Complexity",
+    "riskAssessmentReference": "SP.11",
+    "text": "Does Solution Plan address the risks associated with delivery schedule and highlights any schedule constraints driven by legislation or client business? \n\nDoes it include appropriate schedule contingency?",
+    "optionsCommentsOnImpact": "If there is no schedule contingency, ATC needs to be aware to be able to commit to provide staffing at certain time constraints, and to ensure people are not forced to work unplanned overtime, as it will increase costs, as well as there is a limitation from legislation perspective on how much overtime is allowed in certain period of time.",
+    "excelRowNumber": 43
+  },
+  {
+    "id": "2.2",
+    "riskAssessmentCategory": "3rd Party Supplier/Subcontractor",
+    "riskAssessmentReference": "CP.11",
+    "text": "Is ATC scope of work dependent on other parties (e.g. 3rd parties managed by client, like interface agreements, hardware or software provisioning … ) that may delay the in the schedule/time allocated for ATC scope of work? \n\nWhat dependencies within the solution or mobilization / start up schedule could result in delivery delays?",
+    "optionsCommentsOnImpact": "If ATC work is highly dependent on other teams/3rd parties that may cause initially some idle time, but afterwards ATC maybe pushed to meet the initially planned schedule and work unplanned overtimes that may cause increased costs, impact people engagement and wellbeing (work/life balance).",
+    "excelRowNumber": 44
+  },
+  {
+    "id": "3.1",
+    "riskAssessmentCategory": "Delivery Location",
+    "riskAssessmentReference": "CP.03",
+    "text": "Is ATC management part of overall program governance that is included in the Solution Plan?",
+    "optionsCommentsOnImpact": "ATC management, should be part of overall program governance to ensure that risks and issues related to ATC delivery and staffing are taken care in appropriate program governance forums. Resource pyramid should includes ATC managing time allocation (included by standard in resource requirement details).\n\nSee LATC Standard Governance Structure in Appendices worksheet.\n",
+    "excelRowNumber": 63
+  },
+  {
+    "id": "3.2",
+    "riskAssessmentCategory": "Talent / Skills",
+    "riskAssessmentReference": "CP.05",
+    "text": "Are architecture roles planned in the project also from ATC perspective?",
+    "optionsCommentsOnImpact": "For the bigger teams located in ATC, it is important to ensure that ATC has a technical lead role, who could align/coach the ATC team on architecture decisions, standards and performance considerations to ensure delivery quality.\n",
+    "excelRowNumber": 64
+  },
+  {
+    "id": "3.3",
+    "riskAssessmentCategory": "Industry / Geography",
+    "riskAssessmentReference": "CP.02",
+    "text": "Is it planned for project to be delivered from multiple ATCs?",
+    "optionsCommentsOnImpact": "If there are multiple (\u003e\u003d3 locations involved), this would require additional time for alignment, could cause schedule delays due to time zone differences, as there is a limited timeframe for alignment activities. \n\n",
+    "excelRowNumber": 65
+  },
+  {
+    "id": "4.1",
+    "riskAssessmentCategory": "Complexity",
+    "riskAssessmentReference": "SP.04",
+    "text": "Will on-call support be needed outside normal working hours? Please specify the skills, on-call hours and FTEs you need for on-call work.\n",
+    "optionsCommentsOnImpact": "Please be aware that the ability to support on-call hours varies by Skill, Time and Location.\n\nAlso consider critical mass for on-call support rotation when determining FTE requirements and costs.  \n\nPlease be aware that on-call work will result in additional costs.\n",
+    "excelRowNumber": 92
+  },
+  {
+    "id": "4.2",
+    "riskAssessmentCategory": "Complexity",
+    "riskAssessmentReference": "SP.04",
+    "text": "Will project require shift work?  Please specify the skills, shift hours and FTEs you need for shift work.",
+    "optionsCommentsOnImpact": "Please be aware that the ability to support Shift Work varies by Skill, Time and Location.\n\nAlso consider critical mass for shift work rotation when determining FTE requirements.\n\nPlease be aware that shift work will result in additional costs.\n",
+    "excelRowNumber": 93
+  },
+  {
+    "id": "4.3",
+    "riskAssessmentCategory": "Deal Structure ",
+    "riskAssessmentReference": "CD.05",
+    "text": "What is the deal sourcing type with the client? Is it value based or capacity services? Do we have planned proper seniority of delivery oversight from ATC perspective?",
+    "optionsCommentsOnImpact": "For value based deals, we need to ensure proper seniority of delivery management oversight also from ATC perspective.",
+    "excelRowNumber": 94
+  },
+  {
+    "id": "4.4",
+    "riskAssessmentCategory": "Deal Structure ",
+    "riskAssessmentReference": "CD.07",
+    "text": "Are there penalties associated with the ATC not meeting project milestones (deliverables sign-off) or adhering to Service Level Agreements associated with the project?\n",
+    "optionsCommentsOnImpact": "It may require increased leadership management attention from ATC side.",
+    "excelRowNumber": 95
+  },
+  {
+    "id": "5.1",
+    "riskAssessmentCategory": "Talent / Skills",
+    "riskAssessmentReference": "CP.05",
+    "text": "Does your project require Enterprise Software skills? \n\nIf yes, please list your specific needs - choose one or more from the list shown upon value entry.\n",
+    "optionsCommentsOnImpact": " - SAP\n - Salesforce\n - Oracle Applications\n - Siebel\n - if other please specify\n",
+    "excelRowNumber": 99
+  },
+  {
+    "id": "5.2",
+    "riskAssessmentCategory": "Talent / Skills",
+    "riskAssessmentReference": "CP.05",
+    "text": "Which platform/s do you expect to use on your project?  \n\nPlease list your specific needs in the \"Client Team Response\" column\n",
+    "optionsCommentsOnImpact": " - Microsoft\n - Unix\n - Mainframes\n - if other, please specify",
+    "excelRowNumber": 100
+  },
+  {
+    "id": "5.3",
+    "riskAssessmentCategory": "Talent / Skills",
+    "riskAssessmentReference": "CP.05",
+    "text": "Please specify programming language skills you need on the project in the \"Client Team Response\" column, choose one or more from the list shown upon value entry.",
+    "optionsCommentsOnImpact": " - Java\n - Assembler\n - C++\n - Oracle PL/SQL\n - Unix scripting\n - .Net\n - Cobol\n - if other, please specify\n",
+    "excelRowNumber": 101
+  },
+  {
+    "id": "5.4",
+    "riskAssessmentCategory": "Delivery Location",
+    "riskAssessmentReference": "CP.03",
+    "text": "Is there a need for Technology Center resources to communicate in languages other than English? If so, please specify the additional languages needed.\n",
+    "optionsCommentsOnImpact": "If the language requirements are non-standard (non-English), this adds additional risks to the project and may include additional costs due to translation and skills availability.",
+    "excelRowNumber": 102
+  },
+  {
+    "id": "5.5",
+    "riskAssessmentCategory": "Experience",
+    "riskAssessmentReference": "CP.04",
+    "text": "Have you checked with the ATC if you require skills which are premium skills and/or rare skills  in that ATC?\n",
+    "optionsCommentsOnImpact": "In case a technology or package module where ATC has limited technical expertise, there is a risk of people replacement/rotation options, and some additional KT/trainings might be needed.",
+    "excelRowNumber": 103
+  },
+  {
+    "id": "5.6",
+    "riskAssessmentCategory": "Experience",
+    "riskAssessmentReference": "CP.04",
+    "text": "Does your project require any specific skills on process or Methodologies? If yes, please choose from the list shown upon value entry.\n",
+    "optionsCommentsOnImpact": " - Iterative Waterfall\n - Agile (e.g. SAFe, LeSS)\n - if other, please specify",
+    "excelRowNumber": 104
+  },
+  {
+    "id": "6.1",
+    "riskAssessmentCategory": "Delivery Location",
+    "riskAssessmentReference": "CP.03",
+    "text": "Please specify any client location requirements (e.g. city, resources Working in client\u0027s captive Centre)?",
+    "optionsCommentsOnImpact": "Note that the ATC reserves the right to make the final decision on location within the ATC, taking into account resource availability and lead times as well as client location requirements / preferences. Change of location may have a material impact on resource availability.\n",
+    "excelRowNumber": 109
+  },
+  {
+    "id": "6.2",
+    "riskAssessmentCategory": "Industry / Geography",
+    "riskAssessmentReference": "CP.02",
+    "text": "Is there a need for Technology Center resources to travel to client location/s? Please specify the location/s, number of travelers, indicative dates and approximate duration to account for overall lead times associated with potential hiring and visa processing.\n",
+    "optionsCommentsOnImpact": "Higher risk is for those locations that ATC needs to acquire visas and work permits, and has significant cultural differences.",
+    "excelRowNumber": 110
+  },
+  {
+    "id": "6.3",
+    "riskAssessmentCategory": "Alignment - Solution Plan and Capability ",
+    "riskAssessmentReference": "AL.03",
+    "text": "Have you taken into account RMS (Relocation Management Solutions) procedures and timelines, and have you consulted with RMS regarding appropriate visas to use?\n",
+    "excelRowNumber": 111
+  },
+  {
+    "id": "6.4",
+    "riskAssessmentCategory": "Alignment - Solution Plan and Capability ",
+    "riskAssessmentReference": "AL.03",
+    "text": "Is there a need for the onshore SME to visit the ATC as part of the knowledge transfer plan? If so, please provide details. \n\nPlease be aware that this will result in additional costs.\n",
+    "excelRowNumber": 112
+  },
+  {
+    "id": "7.1",
+    "riskAssessmentCategory": "Methodology",
+    "riskAssessmentReference": "CP.12",
+    "text": "Has it been agreed that the engagement will follow the applicable Accenture Methodology(s)?\n",
+    "optionsCommentsOnImpact": "If Yes, please specify the ADM method(s) that will be followed by the project and any agreed exclusions.\n\nIf No please state why the relevant ADM method will not be followed.\n\nIf No,  please provide the following:\n  (1) Engagement senior executives approval\n  (2) Policy 11 Compliance checklist (and option how intended to comply with policy)\n  (3)  Gap analysis between client/other used methodology and Accenture Delivery Methods and remediation to ensure the Company’s quality requirements are met.\n",
+    "excelRowNumber": 117
+  },
+  {
+    "id": "7.2",
+    "riskAssessmentCategory": "Complexity",
+    "riskAssessmentReference": "SP.04",
+    "text": "Has the relevant up-to-date ADM estimator(s) been used to develop the estimate included in the Solution Plan?\n\nIf Yes please state which ADM estimator and version was used, if No please state why the ADM estimator was not used.",
+    "optionsCommentsOnImpact": "If Yes, please specify the ADM Estimator that you are planning to use for your project.\n \nIf No,  please provide the following:\n  (1) Engagement senior executives approval\n  (2) Policy 11 Compliance checklist\n  (3) Copy of the non-ADM estimator\n  (4) Gap analysis between the chosen estimator and ADM Estimator, and identify any necessary remediation to ensure the Company’s quality requirements are met. \n\nAs per Accenture global policy 11, all engagements are required to use the Accenture Delivery Methods and Estimators to plan, manage and execute the work. This encompasses any Consulting or Outsourcing work. \n",
+    "excelRowNumber": 118
+  },
+  {
+    "id": "7.3",
+    "riskAssessmentCategory": "Experience",
+    "riskAssessmentReference": "CP.04",
+    "text": "Has the engagement agreed to use a standard workflow management tool to manage requirements/product backlog?\n\nWho will own the tool, manage workflow configuration and usage? If using agile, are there considered tools like JIRA to manage product backlog and related tasks? Who will own the tool, manage workflow configuration and usage?",
+    "optionsCommentsOnImpact": "Lack of team\u0027s experience with specific tools may require additional training for the team and determining requirements management options.",
+    "excelRowNumber": 119
+  },
+  {
+    "id": "7.4",
+    "riskAssessmentCategory": "Experience",
+    "riskAssessmentReference": "CP.04",
+    "text": "Has the engagement agreed to use a standard  work planning tool to develop and baseline the workplan and to track actuals, estimates and forecast dates on at least a weekly basis.  If yes will the ADS standard tool (MSPS) be used to perform this activity?\n\nIf using agile, are there considered tools like JIRA to manage product backlog and related tasks? Who will own the tool, manage workflow configuration and usage?",
+    "optionsCommentsOnImpact": "Lack of team\u0027s experience with specific tools may require additional training for the team and determining work management options.",
+    "excelRowNumber": 120
+  },
+  {
+    "id": "7.5",
+    "riskAssessmentCategory": "Methodology",
+    "riskAssessmentReference": "CP.12",
+    "text": "Has the engagement agreed to use a MyWizard tool to track all risks and issues?",
+    "excelRowNumber": 121
+  },
+  {
+    "id": "7.6",
+    "riskAssessmentCategory": "Experience",
+    "riskAssessmentReference": "CP.04",
+    "text": "Has the engagement agreed to use a standard workflow management tool to manage all in-scope service management functions (i.e. incident, problem, service requests management)?\n\nWho will own the tool, manage workflow configuration and usage?\n",
+    "optionsCommentsOnImpact": "Lack of team\u0027s experience with specific tools may require additional training for the team and determining SLA tracking options.",
+    "excelRowNumber": 122
+  },
+  {
+    "id": "7.7",
+    "riskAssessmentCategory": "Experience",
+    "riskAssessmentReference": "CP.04",
+    "text": "Has the engagement agreed to use a standard  tool to manage project documentation?\n\nWho will own the tool, manage configuration and usage? Tools like Confluence, SharePoint?",
+    "optionsCommentsOnImpact": "Lack of team\u0027s experience with specific tools may require additional training for the team and documentation management options.",
+    "excelRowNumber": 123
+  },
+  {
+    "id": "8.1",
+    "riskAssessmentCategory": "Alignment - Solution Plan and Capability ",
+    "riskAssessmentReference": "AL.03",
+    "text": "Have you determined and obtained approval regarding which roles qualify for Long Term / Short Term rates?",
+    "optionsCommentsOnImpact": "Please refer to the GDN Costing and Operations Guide for Long Term/Short Term rate card policy.\n\nLATC Conditions for Long Term rates:\n- At least 10 FTE\u0027s from ATC\n- Engagement will last at least 18 months\n- 3 months roll off notice\n\nLATC Conditions for Short Term rates:\n- 2 weeks roll off notice\n",
+    "excelRowNumber": 128
+  },
+  {
+    "id": "8.2",
+    "riskAssessmentCategory": "3rd Party Supplier/Subcontractor",
+    "riskAssessmentReference": "CP.10",
+    "text": "Would Client accept staffing contractors on your project?\n",
+    "excelRowNumber": 129
+  },
+  {
+    "id": "8.3",
+    "riskAssessmentCategory": "Alignment - Client Expectations and Contract ",
+    "riskAssessmentReference": "AL.01",
+    "text": "Will it be required that ATC will have to use reduced staffing levels due to pricing concerns and pricing structure applied in solution planning?",
+    "excelRowNumber": 130
+  },
+  {
+    "id": "8.4",
+    "riskAssessmentCategory": "Alignment - Solution Plan and Capability ",
+    "riskAssessmentReference": "AL.03",
+    "text": "Does your team need project-specific training? \nIf so, have you budgeted for time and expenses, and planned for training lead time?\n",
+    "optionsCommentsOnImpact": "Please specify trainings.",
+    "excelRowNumber": 131
+  },
+  {
+    "id": "8.5",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.15",
+    "text": "Please specify any special client driven staffing requirements.\n",
+    "optionsCommentsOnImpact": "Including, but not limited to the following:\n  - Background checks\n  - Third party auditors\n  - Professional and academic qualifications of project resources\n  - Long term commitment of key Technology Center resource/s\n  - Work restrictions after completing assignment\n  - Drugs abuse testing\n  - Use of contractors\n\nPlease refer to the GDN Costing and Operations Guide to determine cost, availability and feasibility of additional requirements.\n",
+    "excelRowNumber": 132
+  },
+  {
+    "id": "8.6",
+    "riskAssessmentCategory": "Talent / Skills",
+    "riskAssessmentReference": "CP.08",
+    "text": "Are there penalties associated with project team attrition during project execution?\n",
+    "optionsCommentsOnImpact": "If Project is proposing to use Agile methodology, make provisions for issues associated with attrition given the high impact of attrition in an agile environment.\n\n",
+    "excelRowNumber": 133
+  },
+  {
+    "id": "8.7",
+    "riskAssessmentCategory": "Talent / Skills",
+    "riskAssessmentReference": "CP.05",
+    "text": "Are there any specific requirements for lead times for staffing requests? Are those significantly shorter than planned (i.e. less than 8 to 12 weeks ?)\n\n",
+    "excelRowNumber": 134
+  },
+  {
+    "id": "8.8",
+    "riskAssessmentCategory": "Complexity",
+    "riskAssessmentReference": "SP.10",
+    "text": "Are the plans for pyramid mix improvements and refresh (in a short term and long term engagements) are established and are available in original Solution Plan?",
+    "optionsCommentsOnImpact": "It is important that planned productivity improvements/cost reductions/pyramid refresh include also appropriate amount of time for Knowledge Transfers and trainings of junior people.\n",
+    "excelRowNumber": 135
+  },
+  {
+    "id": "9.1",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.15",
+    "text": "Do you require workspace at ATC location that is isolated from other projects with key cards/doors?\n",
+    "optionsCommentsOnImpact": "Please provide specific security requirements",
+    "excelRowNumber": 140
+  },
+  {
+    "id": "9.2",
+    "riskAssessmentCategory": "Deal Structure ",
+    "riskAssessmentReference": "CD.08",
+    "text": "Have you contacted Technology Support for guidance on data communications, and have you budgeted it accordingly?\n",
+    "optionsCommentsOnImpact": "To ensure basic Internet connectivity LATC will charge EUR 0.08 for each hour of work delivered from ATC location. In case dedicated bandwidth, VPN etc. is necessary, please state your requirements.\n",
+    "excelRowNumber": 141
+  },
+  {
+    "id": "9.3",
+    "riskAssessmentCategory": "Deal Structure ",
+    "riskAssessmentReference": "CD.08",
+    "text": "Have you budgeted for the cost of voice communications? Please specify any special telecommunication needs.\n\n",
+    "optionsCommentsOnImpact": "Skype for Business (Internet calls and chat) included in LCR. Mobile phones can be provided at additional cost.",
+    "excelRowNumber": 142
+  },
+  {
+    "id": "9.4",
+    "riskAssessmentCategory": "Deal Structure ",
+    "riskAssessmentReference": "CD.08",
+    "text": "Do you need the Technology Center to source any project specific software? If so, please  provide details. This will result in additional cost and may have lead times.\n",
+    "optionsCommentsOnImpact": "This would result in that is Accenture liable for asset ownership (facilities, hardware, software licenses, etc.) that would increase costs.\n",
+    "excelRowNumber": 143
+  },
+  {
+    "id": "9.5",
+    "riskAssessmentCategory": "Deal Structure ",
+    "riskAssessmentReference": "CD.08",
+    "text": "Do you need the Technology Center to source and store any project specific hardware? If so, please provide details. This will result in additional cost and may have lead times.\n",
+    "optionsCommentsOnImpact": "This would result in that is Accenture liable for asset ownership (facilities, hardware, software licenses, etc.) that would increase costs.\n",
+    "excelRowNumber": 144
+  },
+  {
+    "id": "9.6",
+    "riskAssessmentCategory": "Deal Structure ",
+    "riskAssessmentReference": "CD.08",
+    "text": "Please specify if additional Technical support over (apart of standard workstation) is required and if so, what / how much is required?\n",
+    "optionsCommentsOnImpact": "This would result in that is Accenture liable for asset ownership (facilities, hardware, software licenses, etc.) that would increase costs.\n",
+    "excelRowNumber": 145
+  },
+  {
+    "id": "10.1",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Is the client data protection risk assessment completed and further steps determined?\nIf no, what was the rationale for not completing it?\nIf yes, was CDP assessment shared with ATC?\n\n1. Solution Architect role in CDP https://in.accenture.com/protectingaccenture/client-data-protection/solution-architect/\n\n2. Risk Assessments Tool https://clientdataprotection.accenture.com/sites/Client_Data_Protection_Team_Site/ARC_Prod/SitePages/MyAssessments.aspx\n",
+    "optionsCommentsOnImpact": "If in doubt or need additional information, Please contact Clientdataprotection@accenture.com\n\nThe RA must be completed by Stage 2b",
+    "excelRowNumber": 150
+  },
+  {
+    "id": "10.2",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Do client requirements involve Secure Bay / Clean Room setup?",
+    "excelRowNumber": 151
+  },
+  {
+    "id": "10.3",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Do client requirements involve dedicated / Isolated Network setup?",
+    "excelRowNumber": 152
+  },
+  {
+    "id": "10.4",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Do client requirements involve Client rights to perform Vulnerability Assessments / Penetration Testing on Accenture shared infrastructure?\n",
+    "excelRowNumber": 153
+  },
+  {
+    "id": "10.5",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Will the standard GDN web filtering rules apply? Has the client provided additional requirements on URL filtering?\n",
+    "excelRowNumber": 154
+  },
+  {
+    "id": "10.6",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Do client requirements involve restrictions on off-shoring certain parts of the services?\n\n",
+    "excelRowNumber": 155
+  },
+  {
+    "id": "10.7",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Will Accenture be storing, processing or transmitting credit card data from the Technology Center? If yes, please describe how client\u0027s PCI DSS requirements are being addressed in the solution. Note that we are not compliant to PCI DSS by default and the solution will need to provision for any additional requirement\n",
+    "excelRowNumber": 156
+  },
+  {
+    "id": "10.8",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Please specify requirements for any non-standard logical and physical security measures, or security audits.\n",
+    "excelRowNumber": 157
+  },
+  {
+    "id": "10.9",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "Will client provided laptops / desktop images be used? If yes, will they have full hard disk encryption in place?\n",
+    "excelRowNumber": 158
+  },
+  {
+    "id": "10.10",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "If Client Personal Data is being used in a non - production environment, please confirm which of the following 4 options have been included in the solution:\n(i) Anonymization of data\n(ii) Providing no ability for files to be downloaded off of client servers to local PCs\n(iii) Secure Bay\n(iv) Local workstation configuration with no ability to offload data\n",
+    "excelRowNumber": 159
+  },
+  {
+    "id": "10.11",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.14",
+    "text": "If solution includes the use of cloud based infrastructure services, have you worked with the Hosting Service Clearing House and/or Accenture Cloud Platform? If yes, does the team clearly understand its responsibilities regarding server configuration, server hardening, and patching?\n",
+    "excelRowNumber": 160
+  },
+  {
+    "id": "10.12",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.15",
+    "text": "Does your client require compliance with GLBA, HIPAA, DPA or other privacy acts? If so, specify any special considerations that would apply to the work in the Technology Center.\n\n",
+    "optionsCommentsOnImpact": "Full names of abbreviations available in DCSO Instructions worksheet - Glossary part.",
+    "excelRowNumber": 161
+  },
+  {
+    "id": "10.13",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.15",
+    "text": "Does your project need to comply with specific standards like CMMI and ISO27001? If yes, please provide specific standards that need to be adhered to including appropriate details such as CMMI capability level. \n",
+    "excelRowNumber": 162
+  },
+  {
+    "id": "10.14",
+    "riskAssessmentCategory": "IT/Information Security",
+    "riskAssessmentReference": "SP.15",
+    "text": "Does your client need SAS70 report from the Technology Center? ",
+    "optionsCommentsOnImpact": "Please review Accenture\u0027s policy 1382 regarding SAS70 posted at https://policies.accenture.com, and consider any project costs related to the process.\n",
+    "excelRowNumber": 163
+  },
+  {
+    "id": "10.15",
+    "riskAssessmentCategory": "Business Continuity",
+    "riskAssessmentReference": "SP.16",
+    "text": "Specify any Business Continuity / Disaster Recovery (BC/DR) requirements beyond what is provided by \"standard\" Technology Center BC/DR strategy (e.g. in case of power outage, internet outage and recovery time objectives)?\n",
+    "optionsCommentsOnImpact": " If in doubt, please review in detail with the Technology Center contact responsible for BC/DR - sergejs.mlijevskis@accenture.com (LATC Security Lead)",
+    "excelRowNumber": 164
+  }
+]

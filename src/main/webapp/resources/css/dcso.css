@@ -1,0 +1,134 @@
+/*
+Pantone color codes:
+#C2BFB5 Lead Crystal; Gaiši pelēka
+#AFA4CE Lavender; violeta
+#F0A1BF Prism Pink; rozā
+#F5DF4D Illuminating; (viena no) dzeltena
+#CFC486 Shadow green; (dzelteni pelēka)
+#939597 Ultimate Gray; (otra) pelēka (tumši)
+#8CACD3 Placid Blue; (zilgana)
+#363B48 Blue Nights; (tumši zila)
+
+
+
+
+
+ */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 0.2fr 0.1fr 2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "Left-Nav Page-Header-\\\(float\\\)"
+    "Left-Nav Content"
+    "Left-Nav Content";
+}
+
+.Content { grid-area: Content; }
+
+.Left-Nav { grid-area: Left-Nav; }
+
+.Page-Header-\\\(float\\\) { grid-area: Page-Header-\\\(float\\\); }
+
+
+.text-right {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+
+div.raciGridHead .ui-panelgrid-header {
+    margin-left: -0.5em !important;
+    margin-right: -0.5em !important;
+    margin-bottom: 0.5em !important;
+    background: #C2BFB5;
+    font-weight: normal;
+    border-color: #C2BFB5;
+}
+
+div.raciGridHead .ui-panel-titlebar {
+    background: #C2BFB5 !important;
+    text-align: center;
+    font-weight: normal;
+    border-color: #C2BFB5;
+}
+
+div.questionPanel .ui-panel-titlebar {
+    background: #C2BFB5 !important;
+    font-weight: normal;
+}
+
+div.section-panel .ui-panel-titlebar {
+    background: #939597;
+}
+
+div.ui-dialog .ui-dialog-titlebar {
+    background: #80856D !important;
+    font-size: small;
+    margin: 0px;
+}
+
+.twenty-percent {
+    width: 10%;
+}
+
+.eighty-percent {
+    width: 90%;
+}
+
+.top-alignment {
+    vertical-align: top;
+}
+
+.text-light {
+    color: #f8f9fc !important;
+}
+
+a.text-light:hover, a.text-light:focus {
+    color: #c2cbe5 !important;
+}
+
+.btn-light {
+    background: #f8f9fc !important;
+    vertical-align: middle;
+}
+
+a.btn-light:hover, a.btn-light:focus {
+    background: #c2cbe5 !important;
+}
+
+.ui-button, button.ui-button.ui-state-default, .ui-button.ui-state-default {
+    border: 1px solid #156090;
+    color: #fff;
+    background: #8CACD3;
+}
+
+button.ui-button.ui-state-hover,
+.ui-button.ui-state-hover,
+button.ui-button.ui-state-focus,
+.ui-button.ui-state-focus {
+    border: 1px solid #363B48;
+    background: #5C609F;
+    outline: 0 none
+}
+
+.ui-selectbooleanbutton.ui-button.ui-state-active, .ui-selectonebutton .ui-button.ui-state-active, .ui-selectmanybutton .ui-button.ui-state-active {
+    border: 1px solid #156090;
+    background: #998456;
+    color: #fff;
+}
+div.questionTooltip{
+    max-width: 50%;
+}
+
+div.questionTooltip .ui-tooltip-text{
+    background-color: #E7E9E7;
+}
+
+.tab-selected{
+    color:#363B48!important;
+    background-color:#8CACD3!important;
+}

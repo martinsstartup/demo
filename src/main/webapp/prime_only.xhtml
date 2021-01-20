@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet name="css/primeflex/primeflex.css"/>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+    <h:outputStylesheet name="css/dcso.css"/>
+
+    <script>
+        PrimeFaces.locales['en_GB'] = {
+            firstDay: 1
+        };
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <h:outputStylesheet name="css/w3_mod.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+        .w3-sidebar {
+            z-index: 3;
+            width: 200px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+        .hover-blue:hover{
+            color:#F0EEE9!important;
+            background-color:#00589B!important}
+    </style>
+</h:head>
+<h:body style="background: #F0EEE9">
+
+    <!-- Navbar -->
+    <div class="w3-top" >
+        <div class="w3-bar w3-top w3-left-align w3-large" style="background: #363B48;">
+            <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-xlargelarge" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <div class="w3-bar-item">
+                <img src="https://my.accenture.lv/assets/logo-40dc9b3bfa007d7677d5f680c9bba34b2193d63c71d278d82b06fb8a18b8b913.svg" height="15px"/>
+            </div>
+            <div class="w3-bar-item w3-hide-small w3-hide-medium" style="width: 100px"> </div>
+            <div class="ui-g">
+            <p:outputLabel styleClass="w3-bar-item" style="color: #939597;" value="Client: "/>
+            <div id="clNameTop" class="w3-bar-item"> #{dcso.clientName}</div>
+            <p:outputLabel styleClass="w3-bar-item" style="color: #939597;" value="Opp name: "/>
+            <div id="oppNameTop" class="w3-bar-item"> #{dcso.industry}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" id="mySidebar" style="background: #C2BFB5">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-medium w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h6 class="w3-bar-item">DCSO</h6>
+        <a class="w3-bar-item w3-button hover-blue" href="#">Questionaire</a>
+        <a class="w3-bar-item w3-button hover-blue" href="#">Resource Model</a>
+        <a class="w3-bar-item w3-button hover-blue" href="#">Risks</a>
+        <a class="w3-bar-item w3-button hover-blue" href="#">Assumptions</a>
+        <a class="w3-bar-item w3-button hover-blue" href="#">DNPs</a>
+        <a class="w3-bar-item w3-button hover-blue" href="#">Tools</a>
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:200px;margin-top: 43px;">
+        <h:form>
+            <p:panel header="1 - Client context/expectations" id="qSec1" toggleable="true" styleClass="section-panel">
+                <p:panelGrid columns="6" layout="flex"
+                             columnClasses="p-col-3 p-xl-1 text-right, p-col-9 p-xl-3, p-col-3 p-xl-1 text-right, p-col-9 p-xl-3, p-col-3 p-xl-1 text-right, p-col-9 p-xl-3"
+                             contentStyleClass="ui-fluid"
+                             style="margin-left:-0.5em;margin-right: -0.5em;margin-bottom: -0.5em;">
+                    <p:outputLabel for="clientName" value="Client Name:"/>
+                    <p:inputText id="clientName"/>
+
+                    <p:outputLabel for="clientCountry" value="Client country: "/>
+                    <p:autoComplete id="clientCountry" value="#{dcso.clientCountry}"
+                                    completeMethod="#{dcso.completeCountry}"/>
+
+                    <p:outputLabel value="Industry: " for="clientIndustry"/>
+                    <p:selectOneButton value="#{dcso.industry}" id="clientIndustry">
+                        <f:selectItem itemLabel="PRD" itemValue="Products"/>
+                        <f:selectItem itemLabel="FS" itemValue="Financial Services"/>
+                        <f:selectItem itemLabel="CMT" itemValue="CMT"/>
+                        <f:selectItem itemLabel="HPS" itemValue="Health &amp; Public Services"/>
+                        <f:selectItem itemLabel="Other" itemValue="Other"/>
+                    </p:selectOneButton>
+
+                    <p:outputLabel for="clientOverview" value="Client overview: "/>
+                    <p:inputTextarea rows="3" id="clientOverview"/>
+
+                    <p:outputLabel for="clientProblem" value="Client business challenge:"/>
+                    <p:inputTextarea rows="3" id="clientProblem"/>
+
+                    <p:outputLabel for="accentureValueProposition" value="Accenture Value Proposition: "/>
+                    <p:inputTextarea rows="3" id="accentureValueProposition"/>
+                </p:panelGrid>
+
+                <p:panel toggleable="true" style="margin-top: 0.75em" styleClass="questionPanel"
+                         header="1.1 Client Financial Business Case">
+                    <f:facet name="options">
+                        <p:menu>
+                            <p:menuitem value="Assumption" url="#" icon="pi pi-plus"/>
+                            <p:menuitem value="Risk" url="#" icon="pi pi-plus"/>
+                        </p:menu>
+                    </f:facet>
+                    <div class="ui-g">
+                        <div class="ui-g-12">Is client overview, business challenge and Accenture value proposition documented/shared in Solution Plan?</div>
+                    </div>
+                    <div class="ui-g">
+                        <div class="ui-g-12 ui-xl-5 ui-fluid">
+                            <p:inputTextarea id="q11Onsite" cols="3" placeholder="Onsite answer/ask"/>
+                        </div>
+                        <div class="ui-g-12 ui-xl-5 ui-fluid">
+                            <p:inputTextarea id="q11LATC" cols="3" placeholder="LATC response"/>
+                        </div>
+                        <div class="ui-g-12 ui-xl-2 ui-fluid">
+                            <p:button value="+ ass"/>
+                            <p:button value="+ risk"/>
+                        </div>
+                        <p:tooltip id="toolTipFocus" for="q11Onsite" showEvent="focus"
+                                   hideEvent="blur" position="top" styleClass="questionTooltip">
+                            <h:outputText
+                                    value="ATC needs to understand the overall client's business cases and proposed solution. If something similar has been done before or this type of solution is something completely new. Also it allows to evaluate, if ATC prior experience has some lessons learned, that need to be taken into account to ensure the success for similar deal, case within the industry/client."
+                                    style="color: #3C3E40"/>
+                        </p:tooltip>
+                    </div>
+                </p:panel>
+            </p:panel>
+            <p:panel header="2 - OPPORTUNITY DETAILS &amp; MILESTONES" id="qSec2" toggleable="true"
+                     styleClass="section-panel" collapsed="true">
+                <p:panelGrid columns="6" layout="flex"
+                             columnClasses="p-col-3 p-xl-2 text-right, p-col-9 p-xl-2, p-col-3 p-xl-2 text-right, p-col-9 p-xl-2, p-col-3 p-xl-2 text-right, p-col-9 p-xl-2"
+                             contentStyleClass="ui-fluid"
+                             style="margin-left:-0.5em;margin-right: -0.5em;margin-bottom: -0.5em;">
+                    <p:outputLabel for="mmsID" value="MMS Opp ID: "/>
+                    <p:inputText id="mmsID"/>
+
+                    <p:outputLabel for="mmsName" value="MMS Opp name: "/>
+                    <p:inputText id="mmsName"/>
+
+                    <p:outputLabel for="salesStage" value="Sales stage: "/>
+                    <p:selectOneButton id="salesStage">
+                        <f:selectItem itemLabel="0" itemValue="0"/>
+                        <f:selectItem itemLabel="1" itemValue="1"/>
+                        <f:selectItem itemLabel="2a/2b" itemValue="2a/2b"/>
+                        <f:selectItem itemLabel="3a/3b" itemValue="3a/3b"/>
+                    </p:selectOneButton>
+
+                    <p:outputLabel value="Proposal QA review date: " for="propQADate"/>
+                    <p:datePicker id="propQADate" showIcon="true" pattern="dd.MM.yyyy" locale="en_GB"/>
+
+                    <p:outputLabel value="Proposal NBM date: " for="probNbmDate"/>
+                    <p:datePicker id="probNbmDate" showIcon="true" pattern="dd.MM.yyyy" locale="en_GB"/>
+
+                    <p:outputLabel value="(expected) Proposal Submission date: " for="propSubDate"/>
+                    <p:datePicker id="propSubDate" showIcon="true" pattern="dd.MM.yyyy" locale="en_GB"/>
+
+                    <p:outputLabel value="Expected contract Signing Date: " for="signDate"/>
+                    <p:datePicker id="signDate" showIcon="true" pattern="dd.MM.yyyy" locale="en_GB"/>
+
+                    <p:outputLabel value="Expected Delivery Start date:" for="delStartDate"/>
+                    <p:datePicker id="delStartDate" showIcon="true" pattern="dd.MM.yyyy" locale="en_GB"/>
+
+                    <p:outputLabel value="Expected Delivery End date" for="delEndDate"/>
+                    <p:datePicker id="delEndDate" showIcon="true" pattern="dd.MM.yyyy" locale="en_GB"/>
+
+                    <p:outputLabel value="DCSO Expiry date:" for="expDate" style="color: #8b0000; font-weight: bold"/>
+                    <p:datePicker id="expDate" showIcon="true" pattern="dd.MM.yyyy" locale="en_GB"/>
+
+                    <p:outputLabel for="bdWbs" value="BD WBS: "/>
+                    <p:inputText id="bdWbs"/>
+                </p:panelGrid>
+
+                <p:spacer/>
+                <ui:repeat var="question" value="#{dcso.getQuestionnaireQuestions(2)}">
+                    <p:panel toggleable="true" style="margin-top: 0.75em" styleClass="questionPanel"
+                             header="#{question.id.concat(' ').concat(question.riskAssessmentCategory)}">
+                        <f:facet name="options">
+                            <p:menu>
+                                <p:menuitem value="Assumption" url="#" icon="pi pi-plus"/>
+                                <p:menuitem value="Risk" url="#" icon="pi pi-plus"/>
+                            </p:menu>
+                        </f:facet>
+                        <div class="ui-g">
+                            <div class="ui-g-12">#{question.text}</div>
+                        </div>
+
+                        <div class="ui-g">
+                            <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                <p:inputTextarea id="section6QuestionOnsite2" cols="3" placeholder="Onsite answer/ask"/>
+                            </div>
+                            <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                <p:inputTextarea id="section6QuestionLatc2" cols="3" placeholder="LATC response"/>
+                            </div>
+                            <div class="ui-g-12 ui-xl-2 ui-fluid">
+                                <p:button value="+ ass"/>
+                                <p:button value="+ risk"/>
+                            </div>
+                            <p:tooltip id="tipOnsiteAsk2" for="section6QuestionOnsite2" showEvent="focus"
+                                       hideEvent="blur" position="top" styleClass="questionTooltip">
+                                <h:outputText
+                                        value="#{question.optionsCommentsOnImpact}"
+                                        style="color: #3C3E40"/>
+                            </p:tooltip>
+                            <p:tooltip id="tipLATCAnsw2" for="section6QuestionLatc2" showEvent="focus"
+                                       hideEvent="blur" position="top" styleClass="questionTooltip">
+                                <h:outputText
+                                        value="#{question.optionsCommentsOnImpact}"
+                                        style="color: #3C3E40"/>
+                            </p:tooltip>
+                        </div>
+                    </p:panel>
+                </ui:repeat>
+            </p:panel>
+            <p:panel header="3 - OPPORTUNITY KEY CONTACTS &amp; GOVERNANCE" id="qSec3" toggleable="true"
+                     styleClass="section-panel" collapsed="true">
+                <p:panelGrid columns="6" layout="flex"
+                             columnClasses="p-col-3 p-xl-2 text-right, p-col-9 p-xl-2, p-col-3 p-xl-2 text-right, p-col-9 p-xl-2, p-col-3 p-xl-2 text-right, p-col-9 p-xl-2"
+                             contentStyleClass="ui-fluid"
+                             style="margin-left:-0.5em;margin-right: -0.5em;margin-bottom: -0.5em;">
+
+                    <p:outputLabel for="ctOpportunityOwner" value="Client Team Opportunity Owner: "/>
+                    <p:inputText id="ctOpportunityOwner"/>
+
+                    <p:outputLabel for="ctBidManager" value="Client Team Bid Manager: "/>
+                    <p:inputText id="ctBidManager"/>
+
+                    <p:outputLabel for="ctLeadSA" value="Client Team Lead SA: "/>
+                    <p:inputText id="ctLeadSA"/>
+
+                    <p:outputLabel for="ctAccountLead" value="Client Team Account Lead: "/>
+                    <p:inputText id="ctAccountLead"/>
+
+                    <p:outputLabel for="ctQAD" value="Opportunity QA Director: "/>
+                    <p:inputText id="ctQAD"/>
+
+                    <p:outputLabel for="ctCDL" value="Contract Delivery Lead: "/>
+                    <p:inputText id="ctCDL"/>
+
+                    <p:outputLabel for="latcOO" value="LATC Opportunity Owner:"/>
+                    <p:inputText id="latcOO"/>
+
+                    <p:outputLabel for="latcSA" value="LATC Solution Architect: "/>
+                    <p:inputText id="latcSA"/>
+
+                    <p:outputLabel for="latcOgLead" value="LATC OG/Industry Lead:"/>
+                    <p:inputText id="latcOgLead"/>
+
+                    <p:outputLabel for="latcDL" value="LATC Delivery Lead:"/>
+                    <p:inputText id="latcDL"/>
+
+                    <p:outputLabel for="latcPL" value="LATC Portfolio lead:"/>
+                    <p:inputText id="latcPL"/>
+
+                    <p:outputLabel for="latcPM" value="LATC Project Manager:"/>
+                    <p:inputText id="latcPM"/>
+                </p:panelGrid>
+
+                <p:spacer/>
+                <ui:repeat var="question" value="#{dcso.getQuestionnaireQuestions(3)}">
+                    <p:panel toggleable="true" style="margin-top: 0.75em" styleClass="questionPanel"
+                             header="#{question.id.concat(' ').concat(question.riskAssessmentCategory)}">
+                        <f:facet name="options">
+                            <p:menu>
+                                <p:menuitem value="Assumption" url="#" icon="pi pi-plus"/>
+                                <p:menuitem value="Risk" url="#" icon="pi pi-plus"/>
+                            </p:menu>
+                        </f:facet>
+                        <div class="ui-g">
+                            <div class="ui-g-12">#{question.text}</div>
+                        </div>
+
+                        <div class="ui-g">
+                            <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                <p:inputTextarea id="section3QuestionOnsite" cols="3" placeholder="Onsite answer/ask"/>
+                            </div>
+                            <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                <p:inputTextarea id="section3QuestionLatc" cols="3" placeholder="LATC response"/>
+                            </div>
+                            <div class="ui-g-12 ui-xl-2 ui-fluid">
+                                <p:button value="+ ass"/>
+                                <p:button value="+ risk"/>
+                            </div>
+                            <p:tooltip id="tipOnsiteAsk3" for="section3QuestionOnsite" showEvent="focus"
+                                       hideEvent="blur" position="bottom" styleClass="questionTooltip">
+                                <h:outputText
+                                        value="#{question.optionsCommentsOnImpact}"
+                                        style="color: #3C3E40"/>
+                            </p:tooltip>
+                            <p:tooltip id="tipLATCAnsw3" for="section3QuestionLatc" showEvent="focus"
+                                       hideEvent="blur" position="bottom" styleClass="questionTooltip">
+                                <h:outputText
+                                        value="#{question.optionsCommentsOnImpact}"
+                                        style="color: #3C3E40"/>
+                            </p:tooltip>
+                        </div>
+                    </p:panel>
+                </ui:repeat>
+            </p:panel>
+            <!-- =============Section 3 END and Section 4 START ================================================================================ -->
+            <p:panel header="4 - TECHNOLOGY CENTER SCOPE &amp; DEAL COMPLEXITY" id="qSec4" toggleable="true"
+                     styleClass="section-panel" collapsed="true">
+                <p:panelGrid columns="6" layout="flex"
+                             columnClasses="p-col-3 p-xl-3 text-right, p-col-9 p-xl-3, p-col-3 p-xl-3 text-right, p-col-9 p-xl-2"
+                             contentStyleClass="ui-fluid"
+                             style="margin-left:-0.5em;margin-right: -0.5em;margin-bottom: -0.5em;">
+
+                    <p:outputLabel for="scopeServiceGroup" value="Dominant Service Group: "/>
+                    <p:selectOneButton id="scopeServiceGroup">
+                        <f:selectItem itemLabel="AO" itemValue="AO"/>
+                        <f:selectItem itemLabel="SI" itemValue="AO"/>
+                    </p:selectOneButton>
+
+                    <p:outputLabel for="scopeTeamEffort"
+                                   value="Approximate ATC Team effort estimate (in effrot-days: "/>
+                    <p:inputText id="scopeTeamEffort"/>
+                </p:panelGrid>
+                <p:spacer/>
+                <!-- AD RACI -->
+                <p:panel styleClass="raciGridHead">
+                    <f:facet name="header">
+                        <p:outputLabel value="Application Development Lifecycle: ATC RACI"/>
+                        <p:commandLink styleClass="ui-panel-titlebar-icon ui-corner-all ui-state-default"
+                                       onclick="PF('dlg1').show();" update="dialogWidgetBody"><i
+                                class="pi pi-question"></i></p:commandLink>
+                    </f:facet>
+                    <div class="ui-g">
+                        <ui:repeat var="raciHelpQuestion" value="#{dcso.getRaciQuestions('ad')}">
+                            <div class="ui-g-4 ui-xl-2">
+                                <h:panelGrid columns="2" style="width: 100%"
+                                             columnClasses="eighty-percent top-alignment text-right ui-fluid, twenty-percent text-center">
+                                    <p:outputLabel id="raciQLabel" for="raciQ" value="#{raciHelpQuestion.text}"/>
+                                    <p:commandLink onclick="PF('raciHelpDialog').show()"
+                                                   update="raciHelpContent raciHelpTextHeader"
+                                                   styleClass="ui-button btn-light">
+                                        <f:param name="raciHelpQuestion" value="#{raciHelpQuestion}"/>
+                                        <i class="pi pi-question"/>
+                                    </p:commandLink>
+                                </h:panelGrid>
+                            </div>
+                            <div class="ui-g-8 ui-xl-2 ui-fluid">
+                                <p:selectOneButton id="raciQ">
+                                    <f:selectItem itemLabel="A" itemValue="Accountable"/>
+                                    <f:selectItem itemLabel="R" itemValue="Responsible"/>
+                                    <f:selectItem itemLabel="C" itemValue="Consulted"/>
+                                    <f:selectItem itemLabel="I" itemValue="Informed"/>
+                                    <f:selectItem itemLabel="N/A" itemValue="NA"/>
+                                </p:selectOneButton>
+                            </div>
+                        </ui:repeat>
+                    </div>
+                </p:panel>
+                <p:separator/>
+
+                <!-- AO RACI -->
+                <p:panel styleClass="raciGridHead">
+                    <f:facet name="header">
+                        <p:outputLabel value="Service Delivery (AO/AMS): ATC RACI"/>
+                        <p:commandLink styleClass="ui-panel-titlebar-icon ui-corner-all ui-state-default"
+                                       onclick="PF('dlg1').show();" update="dialogWidgetBody"><i
+                                class="pi pi-question"></i></p:commandLink>
+                    </f:facet>
+                    <div class="ui-g">
+                        <ui:repeat var="raciHelpQuestion" value="#{dcso.getRaciQuestions('ao')}">
+                            <div class="ui-g-4 ui-xl-2">
+                                <h:panelGrid columns="2" style="width: 100%"
+                                             columnClasses="eighty-percent top-alignment text-right ui-fluid, twenty-percent text-center">
+                                    <p:outputLabel id="raciQAOLabel" for="raciAOQ" value="#{raciHelpQuestion.text}"/>
+                                    <p:commandLink onclick="PF('raciHelpDialog').show()"
+                                                   update="raciHelpContent raciHelpTextHeader"
+                                                   styleClass="ui-button btn-light">
+                                        <f:param name="raciHelpQuestion" value="#{raciHelpQuestion}"/>
+                                        <i class="pi pi-question"/>
+                                    </p:commandLink>
+                                </h:panelGrid>
+                            </div>
+                            <div class="ui-g-8 ui-xl-2 ui-fluid">
+                                <p:selectOneButton id="raciAOQ">
+                                    <f:selectItem itemLabel="A" itemValue="Accountable"/>
+                                    <f:selectItem itemLabel="R" itemValue="Responsible"/>
+                                    <f:selectItem itemLabel="C" itemValue="Consulted"/>
+                                    <f:selectItem itemLabel="I" itemValue="Informed"/>
+                                    <f:selectItem itemLabel="N/A" itemValue="NA"/>
+                                </p:selectOneButton>
+                            </div>
+                        </ui:repeat>
+
+                        <div class="ui-g-4 ui-xl-2 ui-fluid text-right">
+                            <p:outputLabel id="raciAOshL" for="raciAOsh" value="Service hours:"/>
+                        </div>
+                        <div class="ui-g-8 ui-xl-2 ui-fluid">
+                            <h:panelGrid columns="7" id="raciAOsh">
+                                <p:outputLabel for="aoshst" value="Start:"/>
+                                <p:datePicker id="aoshst" value="#{dcso.serviceWindowStartTime}" timeOnly="true"
+                                              pattern="HH:mm"/>
+                                <h:panelGroup layout="block" style="width:5px;"/>
+                                <p:outputLabel for="aoshet" value="End:"/>
+                                <p:datePicker id="aoshet" value="#{dcso.serviceWindowEndTime}" timeOnly="true"
+                                              pattern="HH:mm"/>
+                                <h:panelGroup layout="block" style="width:5px;"/>
+                                <h:outputText value="EET"/>
+                            </h:panelGrid>
+                        </div>
+
+                        <div class="ui-g-4 ui-xl-2 ui-fluid text-right">
+                            <p:outputLabel id="raciAOocL" for="raciAOoc"
+                                           value="On-call Service (out of office hours support?): "/>
+                        </div>
+                        <div class="ui-g-8 ui-xl-2 ui-fluid">
+                            <p:toggleSwitch value="#{dcso.onCall}" id="raciAOoc"/>
+                        </div>
+                        <div class="ui-g-4 ui-xl-2 ui-fluid text-right">
+                            <p:outputLabel id="raciAOslaL" for="raciAOsla" value="SLAs applicable?: "/>
+                        </div>
+                        <div class="ui-g-8 ui-xl-2 ui-fluid">
+                            <p:toggleSwitch value="#{dcso.SLAs}" id="raciAOsla"/>
+                        </div>
+                    </div>
+                </p:panel>
+                <p:separator/>
+
+                <!-- LATC Management RACI-->
+                <p:panel styleClass="raciGridHead">
+                    <f:facet name="header">
+                        <p:outputLabel value="Management Scope: ATC RACI for ATC Scope"/>
+                        <p:commandLink styleClass="ui-panel-titlebar-icon ui-corner-all ui-state-default"
+                                       onclick="PF('dlg1').show();" update="dialogWidgetBody"><i
+                                class="pi pi-question"></i></p:commandLink>
+                    </f:facet>
+                    <div class="ui-g">
+                        <ui:repeat var="raciHelpQuestion" value="#{dcso.getRaciQuestions('mgmnt')}">
+                            <div class="ui-g-4 ui-xl-2">
+                                <h:panelGrid columns="2" style="width: 100%"
+                                             columnClasses="eighty-percent top-alignment text-right ui-fluid, twenty-percent text-center">
+                                    <p:outputLabel id="raciQMgmntLabel" for="raciMgmntQ"
+                                                   value="#{raciHelpQuestion.text}"/>
+                                    <p:commandLink onclick="PF('raciHelpDialog').show()"
+                                                   update="raciHelpContent raciHelpTextHeader"
+                                                   styleClass="ui-button btn-light">
+                                        <f:param name="raciHelpQuestion" value="#{raciHelpQuestion}"/>
+                                        <i class="pi pi-question"/>
+                                    </p:commandLink>
+                                </h:panelGrid>
+                            </div>
+                            <div class="ui-g-8 ui-xl-2 ui-fluid">
+                                <p:selectOneButton id="raciMgmntQ">
+                                    <f:selectItem itemLabel="A" itemValue="Accountable"/>
+                                    <f:selectItem itemLabel="R" itemValue="Responsible"/>
+                                    <f:selectItem itemLabel="C" itemValue="Consulted"/>
+                                    <f:selectItem itemLabel="I" itemValue="Informed"/>
+                                    <f:selectItem itemLabel="N/A" itemValue="NA"/>
+                                </p:selectOneButton>
+                            </div>
+                        </ui:repeat>
+                    </div>
+                </p:panel>
+            </p:panel>
+            <!-- =============Section 4 END ================================================================================ -->
+            <!--
+                    ================   Only question text section starts (till the end of questionnaire =================
+            -->
+            <ui:repeat value="#{dcso.sections}" var="section" offset="4">
+                <ui:param name="sectionNum" value="#{section.substring(0,section.indexOf('-')-1).trim()}"/>
+                <p:panel header="#{section}" id="repeatSection" toggleable="true" styleClass="section-panel"
+                         collapsed="true">
+
+                    <ui:repeat var="question" value="#{dcso.getQuestionnaireQuestions(sectionNum)}">
+                        <p:panel toggleable="true" style="margin-top: 0.75em" styleClass="questionPanel"
+                                 header="#{question.id.concat(' ').concat(question.riskAssessmentCategory)}">
+                            <f:facet name="options">
+                                <p:menu>
+                                    <p:menuitem value="Assumption" url="#" icon="pi pi-plus"/>
+                                    <p:menuitem value="Risk" url="#" icon="pi pi-plus"/>
+                                </p:menu>
+                            </f:facet>
+                            <div class="ui-g">
+                                <div class="ui-g-12">#{question.text}</div>
+                            </div>
+
+                            <div class="ui-g">
+                                <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                    <p:inputTextarea id="section6QuestionOnsite" cols="3"
+                                                     placeholder="Onsite answer/ask"/>
+                                </div>
+                                <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                    <p:inputTextarea id="section6QuestionLatc" cols="3" placeholder="LATC response"/>
+                                </div>
+                                <div class="ui-g-12 ui-xl-2 ui-fluid">
+                                    <p:button value="+ ass"/>
+                                    <p:button value="+ risk"/>
+                                </div>
+                                <p:tooltip id="tipOnsiteAsk" for="section6QuestionOnsite" showEvent="focus"
+                                           hideEvent="blur" position="bottom" styleClass="questionTooltip">
+                                    <h:outputText
+                                            value="#{question.optionsCommentsOnImpact}"
+                                            style="color: #3C3E40"/>
+                                </p:tooltip>
+                                <p:tooltip id="tipLATCAnsw" for="section6QuestionLatc" showEvent="focus"
+                                           hideEvent="blur" position="bottom" styleClass="questionTooltip">
+                                    <h:outputText
+                                            value="#{question.optionsCommentsOnImpact}"
+                                            style="color: #3C3E40"/>
+                                </p:tooltip>
+                            </div>
+                        </p:panel>
+                    </ui:repeat>
+
+                </p:panel>
+            </ui:repeat>
+            <!--
+                    <p:panel header="5 - HIGH LEVEL TALENT/SKILLS REQUIREMENTS" id="qSec5" toggleable="true">
+                    </p:panel>
+                    <p:panel header="6 - LOCATION &amp; TRAVEL REQUIREMENTS" id="qSec6" toggleable="true" styleClass="section-panel">
+                        <ui:repeat var="question" value="#{dcso.getQuestionnaireQuestions(6)}">
+                            <p:panel toggleable="true" style="margin-top: 0.75em" styleClass="questionPanel" header="#{question.id.concat(' ').concat(question.riskAssessmentCategory)}">
+                                <f:facet name="options">
+                                    <p:menu>
+                                        <p:menuitem value="Assumption" url="#" icon="pi pi-plus"/>
+                                        <p:menuitem value="Risk" url="#" icon="pi pi-plus"/>
+                                    </p:menu>
+                                </f:facet>
+                                <div class="ui-g">
+                                    <div class="ui-g-12">#{question.text}</div>
+                                </div>
+
+                                <div class="ui-g">
+                                    <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                        <p:inputTextarea id="section6QuestionOnsite" cols="3" placeholder="Onsite answer/ask"/>
+                                    </div>
+                                    <div class="ui-g-12 ui-xl-5 ui-fluid">
+                                        <p:inputTextarea id="section6QuestionLatc" cols="3" placeholder="LATC response"/>
+                                    </div>
+                                    <div class="ui-g-12 ui-xl-2 ui-fluid">
+                                        <p:button value="+ ass"/>
+                                        <p:button value="+ risk"/>
+                                    </div>
+                                    <p:tooltip id="tipOnsiteAsk" for="section6QuestionOnsite" showEvent="focus"
+                                               hideEvent="blur" position="top" styleClass="questionTooltip">
+                                        <h:outputText
+                                                value="#{question.optionsCommentsOnImpact}"
+                                                style="color: #3C3E40"/>
+                                    </p:tooltip>
+                                    <p:tooltip id="tipLATCAnsw" for="section6QuestionLatc" showEvent="focus"
+                                               hideEvent="blur" position="top" styleClass="questionTooltip">
+                                        <h:outputText
+                                                value="#{question.optionsCommentsOnImpact}"
+                                                style="color: #3C3E40"/>
+                                    </p:tooltip>
+                                </div>
+                            </p:panel>
+                        </ui:repeat>
+                    </p:panel>
+                    <p:panel header="7 - METHODOLOGY &amp; TOOLS REQUIREMENTS" id="qSec7" toggleable="true">
+                    </p:panel>
+                    <p:panel header="8 - STAFFING PROCESS REQUIREMENTS" id="qSec8" toggleable="true">
+                    </p:panel>
+                    <p:panel header="9 - WORK ENVIRONMENT REQUIREMENTS" id="qSec9" toggleable="true">
+                    </p:panel>
+                    <p:panel header="10 - COMPLIANCE AND SECURITY REQUIREMENTS" id="qSec10" toggleable="true">
+                    </p:panel>
+            -->
+
+        </h:form>
+    </div>
+    <p:dialog widgetVar="raciHelpDialog" minWidth="400" minHeight="200" header="RACI stream help">
+        <f:facet name="header">
+            <h:outputLabel id="raciHelpTextHeader" value="#{raciHelpQuestion.text}" />
+        </f:facet>
+        <h:panelGrid columns="1" id="raciHelpContent">
+            <p:column>
+                <h:outputLabel id="raciHelpTextOutput" value="#{raciHelpQuestion.helpText}" escape="false"/>
+            </p:column>
+        </h:panelGrid>
+    </p:dialog>
+    <p:dialog id="dialogWidget" header="Basic Dialog" widgetVar="dlg1" minHeight="40">
+            <h:outputText value="some RACI help text - please update"/>
+    </p:dialog>
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+</h:body>
+</html>

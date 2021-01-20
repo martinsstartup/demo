@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet name="css/primeflex/primeflex.css"/>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+    <h:outputStylesheet name="css/dcso.css"/>
+    <h:outputStylesheet name="css/sb-admin.css"/>
+    <script>
+        PrimeFaces.locales['en_GB'] = {
+            firstDay: 1
+        };
+    </script>
+</h:head>
+<h:body styleClass="sb-nav-fixed">
+    <div id="left" class="left">
+        <ui:insert name="left">Left</ui:insert>
+    </div>
+    <div>
+        <div id="content" class="left_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+    </div>
+</h:body>
+</html>
