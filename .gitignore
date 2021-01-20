@@ -3,3 +3,16 @@
 /target/
 /src/main/webapp/resources/vendor/fontawesome-free/
 /src/main/webapp/resources/vendor/bootstrap/
+/.idea/artifacts/
+/.idea/libraries/
+/.idea/.gitignore
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/.idea/jsLibraryMappings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/uiDesigner.xml
+/.idea/webContexts.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
